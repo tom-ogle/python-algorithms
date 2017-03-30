@@ -1,14 +1,14 @@
-def insertion_sort(input):
+def insertion_sort(to_sort):
     result = []
-    for this_char in input:
+    for element in to_sort:
         if not result:
-            result.append(this_char)
+            result.append(element)
         else:
-            for index, result_char in enumerate(result):
-                if this_char <= result_char:
-                    result.insert(index, this_char)
+            for index, result_element in enumerate(result):
+                if element <= result_element:
+                    result.insert(index, element)
                     break
             else:
-                result.append(this_char)
+                result.append(element)
 
     return result
